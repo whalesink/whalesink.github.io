@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[基于Hexo的博客搭建(1) - 建站篇]]></title>
+    <url>%2F2019-12-6%2F</url>
+    <content type="text"><![CDATA[Hexo是一个快速、简洁且高效的静态博客框架。本文将介绍如何使用Hexo来搭建个人博客。环境搭建Hexo依赖于以下环境：Node.js（建议10.0及以上版本）git环境搭建过程相对简单，此处不再赘述。安装Hexo你可以使用如下命令来全局安装Hexo：1npm install -g hexo-cli执行完上述命令后，可以使用下面的命令来确认是否安装成功：1hexo -v如果返回版本号等信息，那么恭喜你，入了一个深坑完成了第一步！创建博客目录并初始化创建项目目录并进入：12mkdir myblogcd myblog此处我建立了名为myblog的文件夹,你可以自定义名称哦~请注意，后续所有操作默认在博客根目录下进行初始化blog：1hexo init至此，已经生成了基础的博客框架，先查看一下目录结构：123456789101112131415·├── node_modules //依赖安装目录├── scaffolds //模板文件夹，新建的文章将会从此目录下的文件中继承格式| ├── draft.md //草稿模板| ├── page.md //页面模板| └── post.md //文章模板├── source //资源文件夹，用于放置图片、数据、文章等资源| └── _posts //文章目录├── themes //主题文件夹| └── landscape //默认主题├── .gitignore //指定不纳入git版本控制的文件├── _config.yml //站点配置文件├── db.json //数据库文件├── package.json└── yarn-lock.json在本地启动预览：1hexo server执行完毕后，默认会在本地4000端口启动web程序：localhost:4000如果默认的4000端口被占用，也没有关系，这条指令还可以附加参数：hexo s -p[端口号]你也可以同时启动debug模式：hexo s -debug在浏览器中你会看到它长这模样：emmm默认的主题有点丑，请不要着急，咱先搭建起来，最后再捯饬好康的主题 ~第一篇博客虽然Hexo帮我们写好了一篇，但接下来我们要亲手试着写一篇博客，毕竟意义不同嘛(ง •_•)ง回到cli，接着上面的操作，我们需要按Ctrl+C先停止在本地运行的网站。新建一篇博客：1hexo new &quot;my first blog&quot;你将看到在.\source\_posts\目录下生成了一个名为my first blog.md的文件，可以用记事本（或者你喜欢的任何编辑器）打开它来编写内容。Hexo 支持使用流行的 Markdown 语法来撰写文章，请使用支持Markdown语法的编辑器或插件哦接下来，清理一下数据库文件和public文件夹，然后生成、预览：123hexo clhexo generatehexo s细心的同学发现了，这些常用命令存在简写形式，更多细节参考官方文档 ~]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[高效使用搜索引擎]]></title>
+    <url>%2F2019-12-5%2F</url>
+    <content type="text"><![CDATA[1.搜索完全匹配的结果&quot;Red Dead Redemption&quot; 双引号表示完全匹配，结果中仅出现与搜索文本完全相同的内容2.从搜索结果中排除特定内容a -b 搜索包含a但不包含b的结果（注意a后面的空格不能省略）3.搜索通配符&amp;未知词长城防*墙 星号表示任意字符串4.搜索社交媒体@something 搜索社群中的相关内容,如微博等5.组合搜索A OR B 在关键词A和B中间加OR，表示逻辑“或”操作,将返回包含有A或者B的内容,或者同时包含A与B6.站点内搜索site:zhihu.com 西瓜 在相应的网站或域名前加上site:,将只返回在该站点内的结果7.搜索词汇以及相关文章difine:word 将返回word的词汇定义或其相关文章8.搜索特定文件格式火龙果 filetype:ppt 将返回关键词为ppt格式的链接9.搜索标题内包含关键词的结果intitle:象牙 将返回标题中含有关键字的结果10.搜索网页中含有某链接的结果link:http://baidu.com 结果为包含此链接的页面11.搜索域名中包含特定内容的网站inurl:diygod 结果为URL中含有diygod的网址]]></content>
+      <tags>
+        <tag>零食</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[开启chrome实验中的特性]]></title>
+    <url>%2F%E4%BD%BF%E7%94%A8chrome%E5%AE%9E%E9%AA%8C%E4%B8%AD%E7%9A%84%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[当我们想试用那些还不被广泛支持的实验性特性时，可以在地址栏输入:1chrome://flags#enable-experimental-web-platform-features将选项设置为enabled这样就可以开启实验中的特性了]]></content>
+      <tags>
+        <tag>零食</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[第一篇博客]]></title>
+    <url>%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[第一次总是意义非凡，值得纪念的1hello world开始啦！]]></content>
+      <tags>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+</search>
