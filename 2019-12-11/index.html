@@ -123,7 +123,10 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cocoonut.top/images/2019-12-11/2.png">
 <meta property="og:image" content="https://cocoonut.top/images/2019-12-11/360.png">
-<meta property="og:updated_time" content="2019-12-14T05:19:31.580Z">
+<meta property="og:image" content="https://cocoonut.top/images/2019-12-11/12.png">
+<meta property="og:image" content="https://cocoonut.top/images/2019-12-11/13.png">
+<meta property="og:image" content="https://cocoonut.top/images/2019-12-11/11.png">
+<meta property="og:updated_time" content="2019-12-14T13:46:09.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Hexo的博客搭建(2) - 部署篇">
 <meta name="twitter:description" content="如果你想让人通过互联网访问到你的博客，那么你有三个选择：  自己搭建服务器  购买云主机 使用github pages提供的免费托管服务  如果你是新手或者学生党，那么推荐你选择第三种方式。本文将介绍以此种方式来部署静态网站。 创建站点存储库至此，如果你还没有GitHub账号，去申请一个吧！我保证你不会因此而少块肉的🙃">
@@ -445,7 +448,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-                <span title="字数统计">952</span>
+                <span title="字数统计">1276</span>
               
 
               
@@ -485,14 +488,14 @@
 <li>使用<a href="https://pages.github.com/" target="_blank" rel="noopener">github pages</a>提供的免费托管服务</li>
 </ul>
 <p>如果你是新手或者学生党，那么推荐你选择第三种方式。本文将介绍以此种方式来部署静态网站。</p>
-<h4 id="创建站点存储库"><a href="#创建站点存储库" class="headerlink" title="创建站点存储库"></a>创建站点存储库</h4><p>至此，如果你还没有GitHub账号，去申请一个吧！我保证你不会因此而少块肉的🙃</p>
+<h3 id="创建站点存储库"><a href="#创建站点存储库" class="headerlink" title="创建站点存储库"></a>创建站点存储库</h3><p>至此，如果你还没有GitHub账号，去申请一个吧！我保证你不会因此而少块肉的🙃</p>
 <a id="more"></a>
 
 <p>创建一个名为<code>[你的用户名].github.io</code>的存储库。注意，你的存储库<strong>必须</strong>得是这样的命名，否则无效~</p>
-<h4 id="安装git部署插件"><a href="#安装git部署插件" class="headerlink" title="安装git部署插件"></a>安装git部署插件</h4><p>执行下面的命令，开始无痛安装~~</p>
+<h3 id="安装git部署插件"><a href="#安装git部署插件" class="headerlink" title="安装git部署插件"></a>安装git部署插件</h3><p>执行下面的命令，开始无痛安装~~</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 
-<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><p>将你的公钥绑定在GitHub上，如果尚未生成公钥对，执行如下命令生成新的公钥对：</p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>将你的公钥绑定在GitHub上，如果尚未生成公钥对，执行如下命令生成新的公钥对：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
 
 <p>接下来控制台会和你对话，问你想要保存在哪里，想要设置什么密码等等，一路回车就好。这样，一切都是默认的设置了👌<br>如果你是Win系统，你将在如下目录找到生成的密钥文件<code>id_rsa</code>和公钥文件<code>id_rsa.pub</code>:</p>
@@ -508,8 +511,8 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br><span class="line">hexo g</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>过一段时间后，在浏览器中输入你的仓库名称，就能访问到你的博客了。</p>
-<h4 id="支线任务"><a href="#支线任务" class="headerlink" title="支线任务"></a>支线任务</h4><p>我们的博客至此已经部署成功！接下来的内容对于建站来讲并不是必需的，但能让人更容易、更安全地访问你的博客。</p>
-<h5 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h5><p>许多云服务商都有提供域名服务，没有域名的话可以前往购买。此处仅说明如何将自己的域名指向github page站点。</p>
+<h3 id="支线任务"><a href="#支线任务" class="headerlink" title="支线任务"></a>支线任务</h3><p>我们的博客至此已经部署成功！接下来的内容对于建站来讲并不是必需的，但能让人更容易、更安全地访问你的博客。</p>
+<h4 id="自定义域名"><a href="#自定义域名" class="headerlink" title="自定义域名"></a>自定义域名</h4><p>许多云服务商都有提供域名服务，没有域名的话可以前往购买。此处仅说明如何将自己的域名指向github page站点。</p>
 <p>新建一个CNAME文件，向其中写入你的顶级域名，像这样：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cocoonut.top</span><br></pre></td></tr></table></figure>
 
@@ -520,13 +523,27 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@     CNAME   XXXX.github.io</span><br><span class="line">www   CNAME   XXXX.github.io</span><br></pre></td></tr></table></figure>
 
 <p>将<code>XXXX</code>替换为github你的用户名即可。<br>前者是让你的域名能通过 <a href="https://cocoonut.top">cocoonut.top</a> 这种形式访问;<br>而后者是让你的域名能通过 <a href="https://cocoonut.top">www.cocoonut.top</a>这种形式访问。</p>
-<h5 id="让博客域名支持HTTPS"><a href="#让博客域名支持HTTPS" class="headerlink" title="让博客域名支持HTTPS"></a>让博客域名支持HTTPS</h5><p>在Chrome浏览器中，没有有效的SSL证书的网页都被标记为“不安全”，如国内某安全卫士旗下的子产品官网：<br><img src="/images/2019-12-11/360.png" alt><br>使用HTTPS协议通信的数据都是加密的，会更加安全，而github也为自定义域名提供了这种服务，启用也非常简单：<br>在你的站点仓库下 -&gt; vsettings 找到Custom domain，填入你的域名；<br>勾选Enforce HTTPS 选项。</p>
+<h4 id="让博客域名支持HTTPS"><a href="#让博客域名支持HTTPS" class="headerlink" title="让博客域名支持HTTPS"></a>让博客域名支持HTTPS</h4><p>在Chrome浏览器中，没有有效的SSL证书的网页都被标记为“不安全”，如国内某安全卫士旗下的子产品官网：<br><img src="/images/2019-12-11/360.png" alt="XD"><br>使用HTTPS协议通信的数据都是加密的，会更加安全，而github也为自定义域名提供了这种服务，启用也非常简单：<br>在你的站点仓库下 -&gt; settings 找到Custom domain，填入你的域名；<br>勾选Enforce HTTPS 选项。</p>
 <p>设置后并不会立即生效。你可能需要等待数个小时</p>
-<h5 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h5><ul>
-<li><p>被Google收录</p>
-</li>
-<li><p>被百度收录</p>
-</li>
+<h4 id="添加站点地图"><a href="#添加站点地图" class="headerlink" title="添加站点地图"></a>添加站点地图</h4><p>站点地图是记录了网站中所有超链接的xml文件，它能帮助搜索引擎等爬虫抓取网页。npm为Hexo提供了站点地图插件，可以很方便的生成站点地图文件。</p>
+<ul>
+<li><strong>被Google收录</strong></li>
+</ul>
+<p>安装插件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+<p>该插件会在你每次<code>hexo g</code>时，在<code>public</code>下生成<code>sitmap.xml</code>文件。</p>
+<p>前往<a href="https://search.google.com/search-console/about" target="_blank" rel="noopener">Google searchConsole</a></p>
+<p>Google需要验证你拥有该网站，关于验证方式你有多种选择，这里个人认为比较方便的是使用HTML标记：<br><img src="/images/2019-12-11/12.png" alt></p>
+<p>修改主题配置文件，找到 <code>google-site-verification</code>，值修改为 google 提供的 meta 中 content 的内容。</p>
+<div class="note info"><p>如果你没有在配置项中找到该内容，请查看主题目录下的<code>_partials</code>-&gt;<code>head.swig</code>中是否有如下内容，如果没有，请手动添加</p></div>
+<p><img src="/images/2019-12-11/13.png" alt="添加meta源标签"><br>然后重启、发布博客。回到Google searchConsole，点击验证按钮，然后提交站点地图。<br><img src="/images/2019-12-11/11.png" alt="提交站点地图"></p>
+<p>提交站点地图后我们的网站还没有被抓取，要等搜索引擎下一次更新索引你才能在 google 上搜到，请耐心等待。</p>
+<ul>
+<li><strong>被百度收录</strong><br>和向Google提供站点地图类似，但GitHub主机禁止百度的爬虫访问，因此要麻烦一些。</li>
 </ul>
 
       
@@ -812,7 +829,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建站点存储库"><span class="nav-number">1.</span> <span class="nav-text">创建站点存储库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装git部署插件"><span class="nav-number">2.</span> <span class="nav-text">安装git部署插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署"><span class="nav-number">3.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#支线任务"><span class="nav-number">4.</span> <span class="nav-text">支线任务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自定义域名"><span class="nav-number">4.1.</span> <span class="nav-text">自定义域名</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#让博客域名支持HTTPS"><span class="nav-number">4.2.</span> <span class="nav-text">让博客域名支持HTTPS</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#站点地图"><span class="nav-number">4.3.</span> <span class="nav-text">站点地图</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建站点存储库"><span class="nav-number">1.</span> <span class="nav-text">创建站点存储库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装git部署插件"><span class="nav-number">2.</span> <span class="nav-text">安装git部署插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">3.</span> <span class="nav-text">部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#支线任务"><span class="nav-number">4.</span> <span class="nav-text">支线任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义域名"><span class="nav-number">4.1.</span> <span class="nav-text">自定义域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#让博客域名支持HTTPS"><span class="nav-number">4.2.</span> <span class="nav-text">让博客域名支持HTTPS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加站点地图"><span class="nav-number">4.3.</span> <span class="nav-text">添加站点地图</span></a></li></ol></li></ol></div>
             
 
           </div>
