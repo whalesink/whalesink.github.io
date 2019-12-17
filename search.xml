@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[基于Hexo的博客搭建(4) - 番外篇]]></title>
+    <url>%2F2019-12-19%2F</url>
+    <content type="text"><![CDATA[再挖一坑👀]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[基于Hexo的博客搭建(3) - 写作篇]]></title>
     <url>%2F2019-12-15%2F</url>
     <content type="text"><![CDATA[挖坑待填~]]></content>
