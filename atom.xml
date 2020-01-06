@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cocoonut.top/"/>
-  <updated>2019-12-17T13:58:18.111Z</updated>
+  <updated>2019-12-14T13:46:09.174Z</updated>
   <id>https://cocoonut.top/</id>
   
   <author>
@@ -15,56 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>基于Hexo的博客搭建(4) - 番外篇</title>
-    <link href="https://cocoonut.top/2019-12-19/"/>
-    <id>https://cocoonut.top/2019-12-19/</id>
-    <published>2019-12-17T13:57:05.000Z</published>
-    <updated>2019-12-17T13:58:18.111Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>再挖一坑👀</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://cocoonut.top/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://cocoonut.top/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于Hexo的博客搭建(3) - 写作篇</title>
-    <link href="https://cocoonut.top/2019-12-15/"/>
-    <id>https://cocoonut.top/2019-12-15/</id>
-    <published>2019-12-15T15:10:05.000Z</published>
-    <updated>2019-12-17T13:55:45.879Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>挖坑待填~</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://cocoonut.top/categories/Hexo/"/>
-    
-    
-      <category term="Hexo" scheme="https://cocoonut.top/tags/Hexo/"/>
-    
-  </entry>
   
   <entry>
     <title>基于Hexo的博客搭建(2) - 部署篇</title>
