@@ -100,7 +100,7 @@
 
 
 
-  <meta name="keywords" content="coconut,blog">
+  <meta name="keywords" content="webpack,">
 
 
 
@@ -113,16 +113,20 @@
 
 
 
-<meta name="description" content="前端小小白 | coconut |">
-<meta property="og:type" content="website">
-<meta property="og:title" content="椰子.君">
-<meta property="og:url" content="https://cocoonut.top/index.html">
+<meta name="description" content="作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。 简介webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。 安装与使用 环境确保你的机器配置了Node.js，建议使">
+<meta name="keywords" content="webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack快速入门">
+<meta property="og:url" content="https://cocoonut.top/2020-03-22/index.html">
 <meta property="og:site_name" content="椰子.君">
-<meta property="og:description" content="前端小小白 | coconut |">
+<meta property="og:description" content="作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。 简介webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。 安装与使用 环境确保你的机器配置了Node.js，建议使">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cocoonut.top/images/2019-03-22/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.png">
+<meta property="og:updated_time" content="2020-03-22T16:12:59.158Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="椰子.君">
-<meta name="twitter:description" content="前端小小白 | coconut |">
+<meta name="twitter:title" content="webpack快速入门">
+<meta name="twitter:description" content="作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。 简介webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。 安装与使用 环境确保你的机器配置了Node.js，建议使">
+<meta name="twitter:image" content="https://cocoonut.top/images/2019-03-22/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.png">
 
 
 
@@ -179,13 +183,13 @@
 
 
 
-  <link rel="canonical" href="https://cocoonut.top/">
+  <link rel="canonical" href="https://cocoonut.top/2020-03-22/">
 
 
 
 
 
-  <title>椰子.君</title>
+  <title>webpack快速入门 | 椰子.君</title>
   
 
 
@@ -213,8 +217,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><nav class="site-nav">
   
@@ -361,9 +364,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -409,9 +412,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020-03-22/" itemprop="url">webpack快速入门</a></h1>
+          <h1 class="post-title" itemprop="name headline">webpack快速入门</h1>
         
 
         <div class="post-meta">
@@ -476,9 +477,7 @@
       
 
       
-        
-          
-            <p><img src="/images/2019-03-22/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.png" alt><br>作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。</p>
+        <p><img src="/images/2019-03-22/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.png" alt><br>作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。</p>
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。</p>
 <h3 id="安装与使用"><a href="#安装与使用" class="headerlink" title="安装与使用"></a>安装与使用</h3><ul>
 <li><p>环境<br>确保你的机器配置了<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>，建议使用最新的稳定版本，并配合nvm管理其版本。</p>
@@ -577,506 +576,80 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "build": "webpack",</span><br><span class="line">  "hot": "webpack-dev-server"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
 <center>-未完待更-</center>
-            <div class="post-button text-center">
-              <a class="btn" href="/2020-03-22/#more" rel="contents">
-                阅读全文 &raquo;
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div class="post-share">分享到：</div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>赞赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="coconut 微信扫一扫，向我赞赏">
+        <p>微信扫一扫，向我赞赏</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="coconut 支付宝扫一扫，向我赞赏">
+        <p>支付宝扫一扫，向我赞赏</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019-12-11/" rel="next" title="基于Hexo的博客搭建(2) - 部署篇">
+                <i class="fa fa-chevron-left"></i> 基于Hexo的博客搭建(2) - 部署篇
               </a>
-            </div>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-date">
-			<div class="post-month">12月</div>
-			<div class="post-day">13</div>
-	</div>
-  
-  <div class="post-badge">
-    
-      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Hexo/" itemprop="url" rel="index">
-          <span itemprop="name">Hexo</span>
-        </a>
-      </span>
-    
-  </div>
-  
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cocoonut.top/2019-12-11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="coconut">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/main/to.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="椰子.君">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019-12-11/" itemprop="url">基于Hexo的博客搭建(2) - 部署篇</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-13T21:42:01+08:00">2019-12-13</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">•</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">1276</span>
-              
-
-              
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>如果你想让人通过互联网访问到你的博客，那么你有三个选择：</p>
-<ul>
-<li>自己搭建服务器 </li>
-<li>购买云主机</li>
-<li>使用<a href="https://pages.github.com/" target="_blank" rel="noopener">github pages</a>提供的免费托管服务</li>
-</ul>
-<p>如果你是新手或者学生党，那么推荐你选择第三种方式。本文将介绍以此种方式来部署静态网站。</p>
-<h3 id="创建站点存储库"><a href="#创建站点存储库" class="headerlink" title="创建站点存储库"></a>创建站点存储库</h3><p>至此，如果你还没有GitHub账号，去申请一个吧！我保证你不会因此而少块肉的🙃</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019-12-11/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-date">
-			<div class="post-month">12月</div>
-			<div class="post-day">07</div>
-	</div>
-  
-  <div class="post-badge">
-    
-      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Hexo/" itemprop="url" rel="index">
-          <span itemprop="name">Hexo</span>
-        </a>
-      </span>
-    
-  </div>
-  
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cocoonut.top/2019-12-06/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="coconut">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/main/to.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="椰子.君">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019-12-06/" itemprop="url">基于Hexo的博客搭建(1) - 建站篇</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-07T21:47:33+08:00">2019-12-07</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">•</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">1042</span>
-              
-
-              
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>是一个快速、简洁且高效的静态博客框架。本文将介绍如何使用Hexo来搭建个人博客。</p>
-<h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><p>使用Hexo依赖于以下环境和工具：</p>
-<ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>（建议10.0及以上版本）</li>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">git</a></li>
-</ul>
-<p>安装过程相对简单，此处不再赘述，请自行Google~</p>
-<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>你可以使用如下命令来全局安装Hexo：</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019-12-06/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-date">
-			<div class="post-month">12月</div>
-			<div class="post-day">05</div>
-	</div>
-  
-  <div class="post-badge">
-    
-      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/零食/" itemprop="url" rel="index">
-          <span itemprop="name">零食</span>
-        </a>
-      </span>
-    
-  </div>
-  
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cocoonut.top/2019-12-05/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="coconut">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/main/to.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="椰子.君">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019-12-05/" itemprop="url">高效使用搜索引擎</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-05T21:47:33+08:00">2019-12-05</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">•</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">490</span>
-              
-
-              
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <div class="note info"><p>海量的信息都可以通过搜索引擎这只巨大的爬虫抓取到，学会高效使用搜索引擎是非常必要而且基础的技能，本文整理了一些常用的搜索姿势，熟练使用将很大程度提高你的工作和学习效率。</p></div>
-
-<h4 id="1-搜索完全匹配的结果"><a href="#1-搜索完全匹配的结果" class="headerlink" title="1.搜索完全匹配的结果"></a>1.搜索完全匹配的结果</h4><p><code>&quot;Red Dead Redemption&quot;</code> 双引号表示完全匹配，结果中仅出现与搜索文本完全相同的内容</p>
-<h4 id="2-从搜索结果中排除特定内容"><a href="#2-从搜索结果中排除特定内容" class="headerlink" title="2.从搜索结果中排除特定内容"></a>2.从搜索结果中排除特定内容</h4><p><code>a -b</code> 搜索包含a但不包含b的结果（注意a后面的空格不能省略）</p>
-<h4 id="3-搜索通配符-amp-未知词"><a href="#3-搜索通配符-amp-未知词" class="headerlink" title="3.搜索通配符&amp;未知词"></a>3.搜索通配符&amp;未知词</h4><p><code>长城防*墙</code> 星号表示任意字符串</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019-12-05/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
     </footer>
   </div>
@@ -1086,323 +659,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-date">
-			<div class="post-month">12月</div>
-			<div class="post-day">02</div>
-	</div>
-  
-  <div class="post-badge">
-    
-      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/零食/" itemprop="url" rel="index">
-          <span itemprop="name">零食</span>
-        </a>
-      </span>
-    
-  </div>
-  
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cocoonut.top/2019-12-02/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="coconut">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/main/to.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="椰子.君">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019-12-02/" itemprop="url">开启chrome实验中的特性</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-02T00:58:33+08:00">2019-12-02</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">•</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">59</span>
-              
-
-              
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="当我们想试用那些还不被广泛支持的实验性特性时，可以在地址栏输入"><a href="#当我们想试用那些还不被广泛支持的实验性特性时，可以在地址栏输入" class="headerlink" title="当我们想试用那些还不被广泛支持的实验性特性时，可以在地址栏输入:"></a>当我们想试用那些还不被广泛支持的实验性特性时，可以在地址栏输入:</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chrome://flags#enable-experimental-web-platform-features</span><br></pre></td></tr></table></figure>
-
-<br>
-
-<p><img src="/images/2019-12-02/1.png" alt></p>
-<p>将选项设置为enabled</p>
-<p>这样就可以开启实验中的特性了</p>
-
-            <div class="post-button text-center">
-              <a class="btn" href="/2019-12-02/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-date">
-			<div class="post-month">11月</div>
-			<div class="post-day">30</div>
-	</div>
-  
-  <div class="post-badge">
-    
-      <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/学习笔记/" itemprop="url" rel="index">
-          <span itemprop="name">学习笔记</span>
-        </a>
-      </span>
-    
-  </div>
-  
-
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://cocoonut.top/2019-11-30/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="coconut">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/main/to.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="椰子.君">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019-11-30/" itemprop="url">第一篇博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-30T00:58:33+08:00">2019-11-30</time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">•</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">20</span>
-              
-
-              
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="第一次总是意义非凡，值得纪念的"><a href="#第一次总是意义非凡，值得纪念的" class="headerlink" title="第一次总是意义非凡，值得纪念的"></a>第一次总是意义非凡，值得纪念的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hello world</span><br></pre></td></tr></table></figure>
-
-<h4 id="开始啦！"><a href="#开始啦！" class="headerlink" title="开始啦！"></a>开始啦！</h4>
-            <div class="post-button text-center">
-              <a class="btn" href="/2019-11-30/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1411,10 +672,39 @@
 
           
 
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <div id="dsqjs">
+          <section class="dsqjs-info">
+            <p id="dsqjs-load-disqus" class="dsqjs-message">评论完整模式加载中...如果长时间无法加载，请针对 disq.us | disquscdn.com | disqus.com 启用代理</p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+
 
 
   
 
+    
+      <script type="text/javascript">
+        window.DISQUS = null;
+        new DisqusJS({
+          shortname: 'coconut-1',
+          siteName: '椰子.君',
+          identifier: '2020-03-22/',
+          url: 'https://cocoonut.top/2020-03-22/',
+          api: '',
+          apikey: '',
+          admin: '',
+          adminLabel: '',
+        });
+      </script>
     
 
   
@@ -1463,8 +753,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1546,6 +845,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装与使用"><span class="nav-number">2.</span> <span class="nav-text">安装与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一些必要的准备"><span class="nav-number">2.1.</span> <span class="nav-text">一些必要的准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#两种安装方式"><span class="nav-number">2.2.</span> <span class="nav-text">两种安装方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#本地安装"><span class="nav-number">2.2.1.</span> <span class="nav-text">本地安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全局安装"><span class="nav-number">2.2.2.</span> <span class="nav-text">全局安装</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三种使用方式"><span class="nav-number">2.3.</span> <span class="nav-text">三种使用方式</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#npx命令"><span class="nav-number">2.3.1.</span> <span class="nav-text">npx命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#访问bin版本"><span class="nav-number">2.3.2.</span> <span class="nav-text">访问bin版本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#npm-run-自定义命令"><span class="nav-number">2.3.3.</span> <span class="nav-text">npm run 自定义命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五个核心概念"><span class="nav-number">3.</span> <span class="nav-text">五个核心概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#入口（entry）"><span class="nav-number">3.1.</span> <span class="nav-text">入口（entry）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#输出（output）"><span class="nav-number">3.2.</span> <span class="nav-text">输出（output）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#loader"><span class="nav-number">3.3.</span> <span class="nav-text">loader</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#配置（推荐）"><span class="nav-number">3.3.1.</span> <span class="nav-text">配置（推荐）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#内联"><span class="nav-number">3.3.2.</span> <span class="nav-text">内联</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#cli"><span class="nav-number">3.3.3.</span> <span class="nav-text">cli</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插件（plugins）"><span class="nav-number">3.4.</span> <span class="nav-text">插件（plugins）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装："><span class="nav-number">3.4.1.</span> <span class="nav-text">安装：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#配置："><span class="nav-number">3.4.2.</span> <span class="nav-text">配置：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块热替换（HMR）"><span class="nav-number">3.5.</span> <span class="nav-text">模块热替换（HMR）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
