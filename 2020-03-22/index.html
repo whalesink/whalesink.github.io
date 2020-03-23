@@ -122,7 +122,7 @@
 <meta property="og:description" content="作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。 简介webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cocoonut.top/images/2020-03-22/1.png">
-<meta property="og:updated_time" content="2020-03-23T14:53:31.278Z">
+<meta property="og:updated_time" content="2020-03-23T14:58:09.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack快速入门">
 <meta name="twitter:description" content="作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。 简介webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。">
@@ -444,7 +444,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-                <span title="字数统计">2139</span>
+                <span title="字数统计">2126</span>
               
 
               
@@ -526,7 +526,7 @@
 <li>filename 用于输出文件的文件名</li>
 <li>path 输出目录的绝对路径</li>
 </ul>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 输出。不指定时将采用默认值</span><br><span class="line">const config = &#123;</span><br><span class="line">  // 入口点</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: './src/index'</span><br><span class="line">  &#125;,</span><br><span class="line">  // 输出。不指定时采用默认值</span><br><span class="line"><span class="addition">+  output: &#123;</span></span><br><span class="line"><span class="addition">+    filename: 'bundle.js', //默认值main.js</span></span><br><span class="line"><span class="addition">+    path: path.join(__dirname, './dist1')  //默认为 ./dist</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">module.exports = config;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">const config = &#123;</span><br><span class="line">  // 入口点</span><br><span class="line">  entry: &#123;</span><br><span class="line">    main: './src/index'</span><br><span class="line">  &#125;,</span><br><span class="line">  // 输出。不指定时采用默认值</span><br><span class="line"><span class="addition">+  output: &#123;</span></span><br><span class="line"><span class="addition">+    filename: 'bundle.js', //默认值main.js</span></span><br><span class="line"><span class="addition">+    path: path.join(__dirname, './dist1')  //默认为 ./dist</span></span><br><span class="line"><span class="addition">+  &#125;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">module.exports = config;</span><br></pre></td></tr></table></figure>
 
 <div class="note info"><p>绝对路径的编辑可能需要使用Node.js的相关API，如:<br><a href="http://nodejs.cn/api/path.html#path_path_join_paths" target="_blank" rel="noopener">path.join()</a>  拼接多个路径并返回规范化的路径名<br><a href="http://nodejs.cn/api/modules.html#modules_dirname" target="_blank" rel="noopener">global.__dirname</a>  当前模块的目录名<br><a href="http://nodejs.cn/api/path.html#path_path_resolve_paths" target="_blank" rel="noopener">path.resolve()</a> 将路径或路径片段的序列解析为绝对路径。</p></div>
 
