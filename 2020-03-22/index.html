@@ -122,7 +122,7 @@
 <meta property="og:description" content="作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。 简介webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cocoonut.top/images/2020-03-22/1.png">
-<meta property="og:updated_time" content="2020-03-23T14:58:09.005Z">
+<meta property="og:updated_time" content="2020-04-05T05:45:28.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack快速入门">
 <meta name="twitter:description" content="作为前端工程化关键的一环，十分有必要来掌握使用webpack来打包构建项目工程。这里分享我的学习过程，适合作为入门级别来了解webpack的使用。 简介webpack 是一个javascript的静态模块打包器。通过它可以将多种静态资源（js、css、sass、图片、字体等）转换为一个静态js文件，这种方式可以减少页面的请求，优化网页性能。">
@@ -444,7 +444,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-                <span title="字数统计">2126</span>
+                <span title="字数统计">2123</span>
               
 
               
@@ -597,7 +597,7 @@
 <p>可以在普通脚本中通过访问<code>process.env.NODE_ENV</code>变量来做不同的事情，比如这样：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(process.env.NODE_ENV === <span class="string">'development'</span>)&#123;</span><br><span class="line">  <span class="comment">// 若为开发模式 则打印此内容</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'base url is localhost'</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">  <span class="comment">// 生产模式下是这个</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'base url is cocoonut.top'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>运行<code>npm run dev</code>打包后，你将会得到你想要的结果。<br>细心的小伙伴会注意到，在未指定<code>mode</code>字段的时候，webpack会按照<code>development</code>模式打包，并且在控制台反馈这一警告，指定后则不会出现。</p>
+<p>运行<code>npm run dev</code>打包后，你将会得到你想要的结果。<br>你也许会注意到，在未指定<code>mode</code>字段的时候，webpack会按照<code>development</code>模式打包，并且在控制台反馈这一警告，指定后则不会出现。</p>
 
       
     </div>
