@@ -113,18 +113,20 @@
 
 
 
-<meta name="description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些小小的记录。在这篇文章中，你可以了解到：linux操作系统入门，SSH密钥登陆，Docker环境搭建。 云服务商：阿里云操作系统：Ubuntu 18.04.2 LTS">
+<meta name="description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华，且枯燥的记录。 本文阅读对象：不了解Linux和服务器的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介">
 <meta name="keywords" content="零食">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的云主机折腾笔记">
 <meta property="og:url" content="https://cocoonut.top/2020-04-11/index.html">
 <meta property="og:site_name" content="椰子.君">
-<meta property="og:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些小小的记录。在这篇文章中，你可以了解到：linux操作系统入门，SSH密钥登陆，Docker环境搭建。 云服务商：阿里云操作系统：Ubuntu 18.04.2 LTS">
+<meta property="og:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华，且枯燥的记录。 本文阅读对象：不了解Linux和服务器的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-05T14:01:48.818Z">
+<meta property="og:image" content="https://cocoonut.top/images/ls.png">
+<meta property="og:updated_time" content="2020-05-11T17:14:05.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的云主机折腾笔记">
-<meta name="twitter:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些小小的记录。在这篇文章中，你可以了解到：linux操作系统入门，SSH密钥登陆，Docker环境搭建。 云服务商：阿里云操作系统：Ubuntu 18.04.2 LTS">
+<meta name="twitter:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华，且枯燥的记录。 本文阅读对象：不了解Linux和服务器的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介">
+<meta name="twitter:image" content="https://cocoonut.top/images/ls.png">
 
 
 
@@ -442,7 +444,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-                <span title="字数统计">83</span>
+                <span title="字数统计">1420</span>
               
 
               
@@ -475,10 +477,84 @@
       
 
       
-        <p>经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些小小的记录。<br>在这篇文章中，你可以了解到：linux操作系统入门，SSH密钥登陆，Docker环境搭建。</p>
-<p>云服务商：阿里云<br>操作系统：Ubuntu 18.04.2 LTS</p>
-<a id="more"></a>
+        <p>经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华，且枯燥的记录。</p>
+<p>本文阅读对象：不了解Linux和服务器的小白</p>
+<p>在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。</p>
+<p>开启从零开始的运维之<del>坑</del>路~</p>
+<h3 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h3><a id="more"></a>
+<h4 id="Linux是啥？"><a href="#Linux是啥？" class="headerlink" title="Linux是啥？"></a>Linux是啥？</h4><p>一种计算机操作系统。  </p>
+<p>唔，简单来说就是这样。但它是一个<code>CLI</code>（command-line interface，命令行界面）组成的操作系统，在图形化的操作界面如<code>windows</code>得到普及之前，最广泛使用的用户界面就是这样的。</p>
+<p>Linux的作者叫 <code>Linus</code>，瞧，优秀的连名字都是类似的：p  </p>
+<p>这个操作系统基于<code>GPL 2.0</code>开源协议，简单来说你可以自由使用它的源码和发行版，也可以修改它的源代码，但是不能闭源——是的，作者坚持开源的理念。</p>
+<div class="note info"><p>Linux目前有很多发行版，有<code>Dibian</code>,<code>Redhat</code>,<code>CentOS</code>,<code>Ubuntu</code>…等等，其社区非常繁荣。如果Linus申请专利保护，一定能收获难以想象的财富…事实上，他的开源价值观传播到了全世界，越来越多的人们开始为开源做出贡献，才有了今天这样繁荣的开源生态。</p></div>
 
+<p>Linus大神还有另一个开源作品<code>git</code>，它是一种分布式版本控制系统…扯远了，咱还是说Linux吧…</p>
+<p>其实，无论图形界面发展到什么水平，命令行方式的操作永远是不会变的，Linux命令有许多强大的功能：从简单的磁盘操作、文件存取、到进行复杂的多媒体图象和流媒体文件的制作都离不开命令行。虽然linux也有桌面系统，但是<code>X-window</code>也只是运行在命令行模式下的一个应用程序。</p>
+<h4 id="Linux初体验"><a href="#Linux初体验" class="headerlink" title="Linux初体验"></a>Linux初体验</h4><p>我的云主机是阿里云的，操作系统是<code>Ubuntu 18.04.2 LTS</code> 64位的。本文写的不是很好但依然是用心的，接下来的演示也是经过本人深入实践的~</p>
+<p>linux的指令大致可以分为三类：</p>
+<ul>
+<li><p>文档型（文档和目录的增删改查）</p>
+</li>
+<li><p>硬件型（磁盘/进程/服务/网络）</p>
+</li>
+<li><p>功能型（压缩/解压下载，远程）</p>
+</li>
+</ul>
+<p>我们先从远程登陆开始，然后边走边看尝试熟悉linux环境，最后集中总结一下这三种常用指令</p>
+<p>在本地使用ssh建立和远端主机的会话</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@[ipAddress] -p 22</span><br></pre></td></tr></table></figure>
+
+<p><code>ipAddress</code>是服务器的公网ip，<code>-p</code>参数是为ssh远程连接开放的端口，默认为22，可以不用加。</p>
+<p>接下来你需要输入密码，这里的密码是隐文，输入时不会从终端中得到任何反馈，输入完成敲击回车你就可以登陆远端。</p>
+<p>此时如果一切顺利的话你应该已经成功登陆了，我们可以先查看一下操作系统和内核信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a   <span class="comment">#查看操作系统</span></span><br><span class="line">uname -a         <span class="comment">#查看内核信息</span></span><br></pre></td></tr></table></figure>
+
+<p>查看磁盘信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df          <span class="comment">#显示磁盘的区块信息和使用情况（kB）</span></span><br><span class="line">df -TH      <span class="comment">#显示磁盘的情况（GB）</span></span><br></pre></td></tr></table></figure>
+
+<p>查看根目录的内容<br>将当前路径切换到根目录下，查看文件列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /        <span class="comment">#切换目录</span></span><br><span class="line">ls -la      <span class="comment">#以列表的方式显示当前目录结构，包含隐藏文件</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来你会看到这样的列表：<br><img src="/images/ls.png" alt></p>
+<p>最前面的<code>drwxr-xr-xr</code>表示了用户目录的操作权，依次是root用户权限，组权限，其他用户权限。<br><code>d</code>表示这是一个目录（directory）而不是文件<br><code>r</code>表示具有读权限（read）<br><code>w</code>表示具有写权限（write）<br><code>x</code>表示具有执行权限（execute）</p>
+<p>目录的简单说明<br>home：个人目录，可以放一些软件或存放download文件<br>etc：一般是一些软件的配置文件<br>sys：系统文件<br>usr：系统可执行文件<br>var：日志文件，因不断变化命名，包含经常存放的www目录</p>
+<p>查看CPU/内存/进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
+
+<p>这里的表会动态刷新，<code>Tasks</code>是当前运行的进程数量，<code>Mem</code>表示内存占用量，可以按“m”键切换百分比显示</p>
+<p>接下来我们可以修改一下主机的用户名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/hostname       <span class="comment">#使用vi命令编辑这个文件</span></span><br></pre></td></tr></table></figure>
+
+<p>这样会进入查看模式，此时按下<code>a</code>或者<code>i</code>进入编辑模式，修改里面的内容即修改你的用户名。完成编辑后按下<code>esc</code>，输入<code>:wq</code>保存并退出编辑。<br>重启服务器，就可以看到主机名更新啦</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot      <span class="comment">#这样做会断开ssh连接</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改ssh端口"><a href="#修改ssh端口" class="headerlink" title="修改ssh端口"></a>修改ssh端口</h4><p>ssh端口默认为22，修改常用端口后可以提高服务器的安全性，降低遭受攻击的风险；按照下面的步骤操作</p>
+<ol>
+<li><p>编辑SSH配置文件<br>SSH配置文件路径为：<code>/etc/ssh/sshd_config</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改端口号<br>找到port: 22，取消#注释，修改为ssh连接想用的端口号,如</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">port 10022</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>然后<code>esc</code>,输入 <code>:wq</code>保存，退出编辑</p>
+<ol start="3">
+<li>放行ssh端口<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ufw allow 10022</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>某些云服务商需要在云端手动放行端口，在云服务控制台可以找到，手动添加规则即可。</p>
+<ol start="4">
+<li><p>重启远端SSH服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service ssh restart</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>尝试重连</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@[ipAddress] -p 10022</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="使用密钥登陆"><a href="#使用密钥登陆" class="headerlink" title="使用密钥登陆"></a>使用密钥登陆</h4><p>配置密钥后，就可以免密码建立ssh连接了。</p>
 
       
     </div>
@@ -657,14 +733,23 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image" src="/images/main/darling.gif" alt="coconut">
             
-              <p class="site-author-name" itemprop="name"><span style="opacity:.2;"></span>Coconut</p>
+              <p class="site-author-name" itemprop="name"><span style="opacity:.2;"></span>Cocoonut</p>
               <p class="site-description motion-element" itemprop="description">你能抓到我么？</p>
           </div>
 
@@ -740,6 +825,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux简介"><span class="nav-number">1.</span> <span class="nav-text">Linux简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux是啥？"><span class="nav-number">1.1.</span> <span class="nav-text">Linux是啥？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux初体验"><span class="nav-number">1.2.</span> <span class="nav-text">Linux初体验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改ssh端口"><span class="nav-number">1.3.</span> <span class="nav-text">修改ssh端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用密钥登陆"><span class="nav-number">1.4.</span> <span class="nav-text">使用密钥登陆</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
