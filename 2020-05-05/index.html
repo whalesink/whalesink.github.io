@@ -113,19 +113,19 @@
 
 
 
-<meta name="description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介">
+<meta name="description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介Linux是啥？一种计算机操作系统。   唔，简单来说就是这样。但它是一个CLI（command-line int">
 <meta name="keywords" content="零食">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的云主机折腾笔记">
 <meta property="og:url" content="https://cocoonut.top/2020-05-05/index.html">
 <meta property="og:site_name" content="椰子.君">
-<meta property="og:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介">
+<meta property="og:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介Linux是啥？一种计算机操作系统。   唔，简单来说就是这样。但它是一个CLI（command-line int">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cocoonut.top/images/ls.png">
-<meta property="og:updated_time" content="2020-05-12T15:32:50.645Z">
+<meta property="og:updated_time" content="2020-05-12T15:43:55.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的云主机折腾笔记">
-<meta name="twitter:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介">
+<meta name="twitter:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介Linux是啥？一种计算机操作系统。   唔，简单来说就是这样。但它是一个CLI（command-line int">
 <meta name="twitter:image" content="https://cocoonut.top/images/ls.png">
 
 
@@ -481,9 +481,10 @@
 <p>本文阅读对象：<strong>不了解Linux操作系统的小白</strong></p>
 <p>在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。</p>
 <p>开启从零开始的运维之<del>坑</del>路~</p>
-<h3 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h3><a id="more"></a>
-<h4 id="Linux是啥？"><a href="#Linux是啥？" class="headerlink" title="Linux是啥？"></a>Linux是啥？</h4><p>一种计算机操作系统。  </p>
+<h3 id="Linux简介"><a href="#Linux简介" class="headerlink" title="Linux简介"></a>Linux简介</h3><h4 id="Linux是啥？"><a href="#Linux是啥？" class="headerlink" title="Linux是啥？"></a>Linux是啥？</h4><p>一种计算机操作系统。  </p>
 <p>唔，简单来说就是这样。但它是一个<code>CLI</code>（command-line interface，命令行界面）组成的操作系统，在图形化的操作界面如<code>windows</code>得到普及之前，最广泛使用的用户界面就是这样的。</p>
+<a id="more"></a>
+
 <p>Linux的作者叫 <code>Linus</code>，瞧，优秀的连名字都是类似的：p  </p>
 <p>这个操作系统基于<code>GPL 2.0</code>开源协议，简单来说你可以自由使用它的源码和发行版，也可以修改它的源代码，但是不能闭源——是的，作者坚持开源的理念。</p>
 <div class="note info"><p>Linux目前有很多发行版，有<code>Dibian</code>,<code>Redhat</code>,<code>CentOS</code>,<code>Ubuntu</code>…等等，其社区非常繁荣。如果Linus申请专利保护，一定能收获难以想象的财富…事实上，他的开源价值观传播到了全世界，越来越多的人们开始为开源做出贡献，才有了今天这样繁荣的开源生态。</p></div>
