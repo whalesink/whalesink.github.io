@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cocoonut.top/"/>
-  <updated>2020-05-17T10:17:18.761Z</updated>
+  <updated>2020-05-12T15:43:55.145Z</updated>
   <id>https://cocoonut.top/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>js面试知识梳理</title>
-    <link href="https://cocoonut.top/2020-05-17/"/>
-    <id>https://cocoonut.top/2020-05-17/</id>
-    <published>2020-05-17T09:28:39.000Z</published>
-    <updated>2020-05-17T10:17:18.761Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>hi，这一篇是我对JavaScript知识点的总结。</p><p>这里决定采用广度优先写法，先梳理框架，再补充细节。这样做的好处就是（大概）不会遗漏比较重要的知识点，当然缺点也比较明显——很容易就鸽了。</p><a id="more"></a><h2 id="js基础知识"><a href="#js基础知识" class="headerlink" title="js基础知识"></a>js基础知识</h2><h3 id="变量类型和计算"><a href="#变量类型和计算" class="headerlink" title="变量类型和计算"></a>变量类型和计算</h3><h4 id="数据类型和类型转换"><a href="#数据类型和类型转换" class="headerlink" title="数据类型和类型转换"></a>数据类型和类型转换</h4><h4 id="对象的深拷贝"><a href="#对象的深拷贝" class="headerlink" title="对象的深拷贝"></a>对象的深拷贝</h4><h3 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h3><h4 id="显式原型和隐式原型"><a href="#显式原型和隐式原型" class="headerlink" title="显式原型和隐式原型"></a>显式原型和隐式原型</h4><h3 id="作用域、闭包"><a href="#作用域、闭包" class="headerlink" title="作用域、闭包"></a>作用域、闭包</h3><h4 id="作用域和闭包"><a href="#作用域和闭包" class="headerlink" title="作用域和闭包"></a>作用域和闭包</h4><h4 id="this"><a href="#this" class="headerlink" title="this"></a>this</h4><h3 id="异步"><a href="#异步" class="headerlink" title="异步"></a>异步</h3><h3 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h3><h4 id="ES6-Module"><a href="#ES6-Module" class="headerlink" title="ES6 Module"></a>ES6 Module</h4><!--  --><h2 id="Web-API"><a href="#Web-API" class="headerlink" title="Web-API"></a>Web-API</h2><h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="树形结构"><a href="#树形结构" class="headerlink" title="树形结构"></a>树形结构</h4><h4 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h4><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><h4 id="树结构操作"><a href="#树结构操作" class="headerlink" title="树结构操作"></a>树结构操作</h4><h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><h3 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h3><h4 id="navigator"><a href="#navigator" class="headerlink" title="navigator"></a>navigator</h4><h4 id="screen"><a href="#screen" class="headerlink" title="screen"></a>screen</h4><h4 id="location"><a href="#location" class="headerlink" title="location"></a>location</h4><h4 id="history"><a href="#history" class="headerlink" title="history"></a>history</h4><h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><h4 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h4><h4 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h4><h3 id="ajax"><a href="#ajax" class="headerlink" title="ajax"></a>ajax</h3><h4 id="XMLHttpRequest"><a href="#XMLHttpRequest" class="headerlink" title="XMLHttpRequest"></a>XMLHttpRequest</h4><h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><h4 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h4><h3 id="Web-Storage"><a href="#Web-Storage" class="headerlink" title="Web Storage"></a>Web Storage</h3><h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><h4 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h4><h4 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h4><h2 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h2><h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><h3 id="webpack-和-Babel"><a href="#webpack-和-Babel" class="headerlink" title="webpack 和 Babel"></a>webpack 和 Babel</h3><h2 id="生产环境"><a href="#生产环境" class="headerlink" title="生产环境"></a>生产环境</h2><h3 id="页面加载"><a href="#页面加载" class="headerlink" title="页面加载"></a>页面加载</h3><h4 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h4><h4 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h4><h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><h4 id="加载资源优化"><a href="#加载资源优化" class="headerlink" title="加载资源优化"></a>加载资源优化</h4><h4 id="渲染优化"><a href="#渲染优化" class="headerlink" title="渲染优化"></a>渲染优化</h4><h3 id="安全"><a href="#安全" class="headerlink" title="安全"></a>安全</h3><h4 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h4><h4 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h4>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;hi，这一篇是我对JavaScript知识点的总结。&lt;/p&gt;
-&lt;p&gt;这里决定采用广度优先写法，先梳理框架，再补充细节。这样做的好处就是（大概）不会遗漏比较重要的知识点，当然缺点也比较明显——很容易就鸽了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="面试" scheme="https://cocoonut.top/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="https://cocoonut.top/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>我的云主机折腾笔记</title>
