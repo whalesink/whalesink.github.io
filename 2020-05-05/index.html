@@ -122,7 +122,7 @@
 <meta property="og:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介Linux是啥？一种计算机操作系统。   唔，简单来说就是这样。但它是一个CLI（command-line int">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cocoonut.top/images/ls.png">
-<meta property="og:updated_time" content="2020-05-12T15:43:55.145Z">
+<meta property="og:updated_time" content="2020-06-04T16:56:45.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的云主机折腾笔记">
 <meta name="twitter:description" content="经过一个星期的折腾，总算搞定了服务端的环境搭建。趁着记忆犹新，这里做一些朴实无华并且枯燥的记录。 本文阅读对象：不了解Linux操作系统的小白 在这篇文章中，你可以了解到：linux操作系统入门，通过SSH密钥远程登陆，Docker环境搭建。 开启从零开始的运维之坑路~ Linux简介Linux是啥？一种计算机操作系统。   唔，简单来说就是这样。但它是一个CLI（command-line int">
@@ -444,7 +444,7 @@
                 
                   <span class="post-meta-item-text">字数统计</span>
                 
-                <span title="字数统计">2250</span>
+                <span title="字数统计">2615</span>
               
 
               
@@ -593,7 +593,7 @@
 
 <p>多个ssh信息都可以写在这个文件中。</p>
 <p>接下来，使用<code>ssh [远端主机用户名]</code>就可以直接建立SSH会话啦！</p>
-<h3 id="Docker入门"><a href="#Docker入门" class="headerlink" title="Docker入门"></a>Docker入门</h3><h4 id="容器化应用Docker"><a href="#容器化应用Docker" class="headerlink" title="容器化应用Docker"></a>容器化应用Docker</h4><p>时下最火的虚拟化技术就是<code>Docker</code>了。在容器技术之前，业界的网红是虚拟机。虚拟机技术的代表，是<code>VMWare</code>和<code>OpenStack</code>。</p>
+<h3 id="Docker入门"><a href="#Docker入门" class="headerlink" title="Docker入门"></a>Docker入门</h3><h4 id="容器化应用Docker"><a href="#容器化应用Docker" class="headerlink" title="容器化应用Docker"></a>容器化应用Docker</h4><p>时下最火的虚拟化技术就是<code>Docker</code>了。在容器技术之前，业界的网红是虚拟机。而虚拟机技术的代表，是<code>VMWare</code>和<code>OpenStack</code>。之所以容器技术会火，是因为它小，轻，快。</p>
 <h4 id="Docker的主要特性"><a href="#Docker的主要特性" class="headerlink" title="Docker的主要特性"></a>Docker的主要特性</h4><table>
 <thead>
 <tr>
@@ -639,7 +639,33 @@
 <li>容器（Container）</li>
 <li>仓库（Repository）</li>
 </ul>
-<h4 id="Docker环境搭建"><a href="#Docker环境搭建" class="headerlink" title="Docker环境搭建"></a>Docker环境搭建</h4><h4 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h4><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3>
+<h4 id="Docker环境搭建"><a href="#Docker环境搭建" class="headerlink" title="Docker环境搭建"></a>Docker环境搭建</h4><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>以<code>Ubuntu 18.04 LTS</code>为例，最省心的安装方式是<a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository" target="_blank" rel="noopener">使用存储库安装。</a></p>
+<p>其他操作系统请<a href="https://docs.docker.com/engine/install/" target="_blank" rel="noopener">移步这里。</a></p>
+<ol>
+<li><p>更新<code>apt</code>软件包索引并安装软件包，以允许apt通过HTTPS使用存储库：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 更新</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install \</span></span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加Docker的官方GPG密钥：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>通过搜索指纹的后8个字符，验证现在是否拥有带有指纹的密钥：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-key fingerprint 0EBFCD88</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 示例</span></span><br><span class="line">pub   rsa4096 2017-02-22 [SCEA]</span><br><span class="line">      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88</span><br><span class="line">uid           [ unknown] Docker Release (CE deb) &lt;docker@docker.com&gt;</span><br><span class="line">sub   rsa4096 2017-02-22 [S]</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>设置稳定的存储库。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 以amd64处理器架构为例，其他类型的架构需要修改`arch=`后的参数</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo add-apt-repository \</span></span><br><span class="line">   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span><br><span class="line"><span class="meta">   $</span><span class="bash">(lsb_release -cs) \</span></span><br><span class="line">   stable"</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装<code>Docker</code>引擎</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 更新apt程序包索引</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get update</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装最新版本的Docker Engine和容器(也可以安装指定版本)</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo apt-get install docker-ce docker-ce-cli containerd.io</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>尝试运行<code>Hello world</code>镜像，验证是否已经正确安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 首次执行时，这个命令会自动拉取hello-world镜像，然后运行</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> sudo docker run hello-world</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h4><h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3>
       
     </div>
     
@@ -919,7 +945,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux简介"><span class="nav-number">1.</span> <span class="nav-text">Linux简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux是啥？"><span class="nav-number">1.1.</span> <span class="nav-text">Linux是啥？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux初体验"><span class="nav-number">1.2.</span> <span class="nav-text">Linux初体验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改ssh端口"><span class="nav-number">1.3.</span> <span class="nav-text">修改ssh端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用密钥登陆"><span class="nav-number">1.4.</span> <span class="nav-text">使用密钥登陆</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker入门"><span class="nav-number">2.</span> <span class="nav-text">Docker入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#容器化应用Docker"><span class="nav-number">2.1.</span> <span class="nav-text">容器化应用Docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker的主要特性"><span class="nav-number">2.2.</span> <span class="nav-text">Docker的主要特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker技术的三大核心概念"><span class="nav-number">2.3.</span> <span class="nav-text">Docker技术的三大核心概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker环境搭建"><span class="nav-number">2.4.</span> <span class="nav-text">Docker环境搭建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker-Compose"><span class="nav-number">2.5.</span> <span class="nav-text">Docker Compose</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux简介"><span class="nav-number">1.</span> <span class="nav-text">Linux简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux是啥？"><span class="nav-number">1.1.</span> <span class="nav-text">Linux是啥？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux初体验"><span class="nav-number">1.2.</span> <span class="nav-text">Linux初体验</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改ssh端口"><span class="nav-number">1.3.</span> <span class="nav-text">修改ssh端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用密钥登陆"><span class="nav-number">1.4.</span> <span class="nav-text">使用密钥登陆</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker入门"><span class="nav-number">2.</span> <span class="nav-text">Docker入门</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#容器化应用Docker"><span class="nav-number">2.1.</span> <span class="nav-text">容器化应用Docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker的主要特性"><span class="nav-number">2.2.</span> <span class="nav-text">Docker的主要特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker技术的三大核心概念"><span class="nav-number">2.3.</span> <span class="nav-text">Docker技术的三大核心概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker环境搭建"><span class="nav-number">2.4.</span> <span class="nav-text">Docker环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装"><span class="nav-number">2.4.1.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker-Compose"><span class="nav-number">2.5.</span> <span class="nav-text">Docker Compose</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">3.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
